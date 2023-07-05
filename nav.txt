@@ -1,0 +1,77 @@
+npm install react react-dom
+npm install react-router-dom
+
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
+  return (
+    <nav>
+      <div className="logo">
+        <Link to="/">StockTrends</Link>
+      </div>
+      <div className="search-bar">
+        <input type="text" placeholder="Search" />
+        <button>Search</button>
+      </div>
+      <ul className="nav-links">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/chart">Chart</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/stocktrends">StockTrends</Link>
+        </li>
+        <li>
+          <Link to="/news">News</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
+
+
+Footer.js
+-----------
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import Home from './Home';
+import Chart from './Chart';
+import About from './About';
+import StockTrends from './StockTrends';
+import News from './News';
+
+const App = () => {
+  return (
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/chart" component={Chart} />
+          <Route path="/about" component={About} />
+          <Route path="/stocktrends" component={StockTrends} />
+          <Route path="/news" component={News} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App;
+
+Finally, create separate files for the different pages (Home.js, Chart.js, About.js, StockTrends.js, and News.js) and add your desired content.
+
+
