@@ -1,3 +1,11 @@
+# Pulse Stock is a machine learning based project aimed to predict stock prices
+and gives suggestions regarding investment.
+This was a group project made with react for frontend, python for ML,
+firebase for database and hosting.
+Played my part as a web developer and developed the web app for
+rendering the real-time stock data and simulator.
+Tech Stack:- React, Python, Firebase, Nodejs, Tensorflow.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
